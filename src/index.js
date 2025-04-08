@@ -13,9 +13,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const credentials = JSON.parse(
-  await readFile("./src/dialogflow-credentials.json", "utf8")
-);
+const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS_JSON);
 
 const auth = new GoogleAuth({
   credentials,
