@@ -1,0 +1,6 @@
+# Jangan upload file rahasia
+.env
+dialogflow-credentials.json
+
+# Folder yang tidak perlu diupload
+node_modules/
