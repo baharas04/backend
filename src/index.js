@@ -4,12 +4,14 @@ import { readFile } from "fs/promises";
 import cors from "cors";
 import { GoogleAuth } from "google-auth-library";
 import OpenAI from "openai";
+import router from "../src/routes/materiroutes.js";
+// const router = require("./routes/materiroutes");
 
 // Load env variables
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json());
@@ -76,6 +78,8 @@ Contoh struktur jawaban:
 app.get("/", (req, res) => {
   res.send("Chatbot webhook is running!");
 });
+
+app.use("/api/materi", router);
 
 // === Route untuk Dialogflow ===
 app.post("/api/webhook", async (req, res) => {
