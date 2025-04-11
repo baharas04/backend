@@ -34,6 +34,9 @@ app.get("/", (req, res) => {
   res.send("Chatbot webhook is running!");
 });
 
+app.use('/api/materi', materiRoutes);
+
+
 app.post("/api/webhook", async (req, res) => {
   const userQuestion = req.body.queryResult.queryText;
 
