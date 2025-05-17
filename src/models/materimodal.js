@@ -8,7 +8,7 @@ const createMateri = async (data) => {
 };
 
 const getAllMateri = async () => {
-  return await prisma.materi.findMany();
+  return await prisma.Materi.findMany();
 };
 
 const getMateriById = async (id) => {

@@ -14,4 +14,7 @@ model Materi {
   link      String
   updatedAt DateTime @updatedAt
   createdAt DateTime @default(now())
+
+  
+   @@map("Materi")
 }
