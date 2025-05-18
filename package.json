@@ -1,6 +1,7 @@
 {
   "name": "chat-bot-server",
   "version": "1.0.0",
+  "type" : "module",
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js",

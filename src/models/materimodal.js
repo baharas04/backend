@@ -1,39 +1,26 @@
-const { PrismaClient } = require('@prisma/client');
+import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-const createMateri = async (data) => {
-  return await prisma.materi.create({
-    data,
-  });
+export const createMateri = async (data) => {
+  return await prisma.Materi.create({ data });
 };
 
-const getAllMateri = async () => {
+export const getAllMateri = async () => {
   return await prisma.Materi.findMany();
 };
 
-const getMateriById = async (id) => {
-  return await prisma.materi.findUnique({
-    where: { id: id },
-  });
+export const getMateriById = async (id) => {
+  return await prisma.Materi.findUnique({ where: { id } });
 };
 
-const updateMateri = async (id, data) => {
-  return await prisma.materi.update({
-    where: { id: id },
-    data,
-  });
+export const updateMateri = async (id, data) => {
+  return await prisma.Materi.update({ where: { id }, data });
 };
 
-const deleteMateri = async (id) => {
-  return await prisma.materi.delete({
-    where: { id: id },
-  });
+export const deleteMateri = async (id) => {
+  return await prisma.Materi.delete({ where: { id } });
 };
 
-module.exports = {
-  createMateri,
-  getAllMateri,
-  getMateriById,
-  updateMateri,
-  deleteMateri,
-};
+
+
+
