@@ -12,9 +12,9 @@ model Materi {
   judul     String
   deskripsi String
   link      String
-  updatedAt DateTime @updatedAt @map("updatedAt")
-  createdAt DateTime @default(now()) @map("createdAt")
+  updatedat DateTime @updatedAt
+  createdat DateTime @default(now())
 
-  
-   @@map("Materi")
+  @@map("Materi")
 }
+
