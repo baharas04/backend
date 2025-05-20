@@ -6,7 +6,12 @@ export const createMateri = async (data) => {
 };
 
 export const getAllMateri = async () => {
-  return await prisma.Materi.findMany();
+  return await prisma.Materi.findMany({
+    orderBy: {
+      id: 'asc'
+    }
+  });
+  
 };
 
 export const getMateriById = async (id) => {
