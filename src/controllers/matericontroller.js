@@ -9,7 +9,7 @@ import {
 
 // Membuat Materi
 export const createMateriController = async (req, res) => {
-  const { judul, deskripsi, link } = req.body;
+  const { judul, deskripsi, link, sumber } = req.body;
 
   if (!judul || !deskripsi || !link) {
     return res.status(400).json({ error: "Semua field harus diisi" });
